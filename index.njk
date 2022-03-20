@@ -1,0 +1,52 @@
+---
+title: Beranda
+layout: layouts/base.njk
+---
+
+<section class="section">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-9">
+                <div class="box cardy">
+                    <h1 class="is-size-4 has-text-weight-bold has-text-white">{{ site.title }}</h1>
+                    <p class="my-2 has-text-white has-text-weight-medium">👋 {{ site.description }} 🦩</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+
+        <div class="columns is-centered">
+
+            <div class="column is-9">
+                <h2 class="subtitle has-text-weight-medium has-text-black">📒 Latest articles</h2>
+            {% for post in collections.post | reverse %}
+            {% if loop.index0 < 3 %}
+                <div class="box article-post">
+
+
+                   <h3 class="is-size-7 has-text-weight-bold is-uppercase mb-2 has-text-black">
+                   <time datetime="{{ post.data.date }}">{{ post.data.date | readableDate }}</time>
+                    </h3>
+
+                    <a href="{{ post.url }}" class="judul is-size-4 has-text-weight-bold">{{ post.data.title }}</a>
+
+                    <p class="mt-2 mb-3"> {{ post.data.description }}
+                    </p>
+
+                </div>
+
+            {% endif %}
+            {% endfor %}    
+               
+                <div class="has-text-right">
+                    <a href=" /posts " class="button is-primary is-light ">👉 See more articles </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
