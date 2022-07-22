@@ -49,6 +49,10 @@ h3.kategori {
     color: rgb(87, 122, 95) !important;
 }
 
+.box .article-post {
+    background: #0c4a6e;
+}
+
 .box:hover{
     border-color: rgb(19, 131, 79);
     border-style: solid;
@@ -64,5 +68,5 @@ li {
 }
 
 .foot {
-    background-color: #a7f3d0;
+    background-color: #164e63;
 }
