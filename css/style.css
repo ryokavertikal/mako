@@ -23,7 +23,7 @@ h3.kategori {
 }
 
 .article-post a.judul:hover {
-    color: #10b981;
+    color: black;
     text-decoration: underline;
 }
 
@@ -63,10 +63,6 @@ li {
 }
 
 .foo {
-    background-color: #0e7490;
+   
     
-}
-
-.foot {
-    background-color: #164e63;
 }
